@@ -1,0 +1,245 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* VARIABLES */
+:root {
+  /* COLORS */
+  --color-deep-aquamarine: #3d8168;
+  --color-cream: hsl(30, 38%, 92%);
+  --color-gunmetal: #1c232b;
+  --color-aurometal-saurus: #6c7289;
+  --color-white: hsl(0, 0%, 100%);
+
+  --font-size-default: 14px;
+
+  /* SPACES-MOBILE */
+  --spacing-50-mobile: 12px;
+  --spacing-100-mobile: 16px;
+  --spacing-150-mobile: 20px;
+  --spacing-200-mobile: 24px;
+  --spacing-250-mobile: 28px;
+
+  /* SPACES-DESKTOP */
+  --spacing-50: 20px;
+  --spacing-100: 24px;
+  --spacing-150: 30px;
+  --spacing-200: 32px;
+}
+
+/* GENERAL */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-size: var(--font-size-default);
+  color: var(--color-aurometal-saurus);
+  background-color: var(--color-cream);
+}
+
+button {
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: var(--spacing-250-mobile) var(--spacing-100-mobile);
+  min-width: 375px;
+}
+
+.flex {
+  display: flex;
+}
+
+/* PRESETS */
+.text-preset-1 {
+  color: var(--color-gunmetal);
+  font-feature-settings: "liga" off, "clig" off;
+
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.text-preset-2 {
+  color: var(--color-aurometal-saurus);
+  font-feature-settings: "liga" off, "clig" off;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.text-preset-3 {
+  color: var(--color-aurometal-saurus);
+  font-feature-settings: "liga" off, "clig" off;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+.text-preset-4 {
+  color: var(--color-deep-aquamarine);
+  font-feature-settings: "liga" off, "clig" off;
+
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.text-preset-5 {
+  color: var(--color-aurometal-saurus);
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  text-decoration-line: strikethrough;
+}
+
+.text-preset-6 {
+  color: var(--color-white);
+  font-feature-settings: "liga" off, "clig" off;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* SKIP LINK */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+
+  opacity: 0;
+  text-decoration: 0;
+
+  font-weight: 700;
+  color: var(--color-stone-900);
+
+  outline: 3px solid var(--color-stone-900);
+  outline-offset: 5px;
+  border-radius: 1px;
+
+  transition: opacity 0.2s ease-in;
+}
+
+.skip-link:focus-visible {
+  opacity: 1;
+}
+
+/* CARD */
+.card {
+  flex-direction: column;
+}
+
+.card__pic {
+  display: block;
+  max-height: 240px;
+}
+
+.card__pic img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card__wrapper {
+  padding: var(--spacing-200-mobile);
+
+  background: var(--color-white);
+  border-radius: 0 0 10px 10px;
+}
+
+.card__category {
+  margin-bottom: var(--spacing-50-mobile);
+}
+
+.card__product-title {
+  margin-bottom: var(--spacing-100-mobile);
+}
+
+.card__descr {
+  margin-bottom: var(--spacing-200-mobile);
+}
+
+.card .price__wrapper {
+  align-items: center;
+  gap: 19px;
+  margin-bottom: var(--spacing-150-mobile);
+}
+
+.card__btn {
+  align-items: center;
+  gap: 11px;
+
+  width: 100%;
+  max-width: 295px;
+  padding: 15px 92px;
+  background-color: var(--color-deep-aquamarine);
+  border-radius: 8px;
+}
+
+.card__btn svg path{
+  fill: var(--color-white);
+}
+
+/* ATTRIBUTION */
+.attribution {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: "Young Serif", serif;
+  text-align: center;
+  color: var(--color-stone-900);
+}
+
+.attribution a {
+  color: var(--color-rose-800);
+  text-decoration: none;
+
+  outline: none;
+  border-bottom: 2px solid transparent;
+
+  transition: color 0.2s ease-in, border-color 0.2s ease-in;
+}
+
+.attribution a:focus-visible {
+  border-color: var(--color-rose-800);
+}
+
+.attribution a:hover {
+  border-color: var(--color-rose-800);
+}
+
+.attribution a:active {
+  border-color: var(--color-rose-800);
+}

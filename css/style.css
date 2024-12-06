@@ -5,6 +5,7 @@
 :root {
   /* COLORS */
   --color-deep-aquamarine: #3d8168;
+  --color-deep-aquamarine-active: #1A4032;
   --color-cream: hsl(30, 38%, 92%);
   --color-gunmetal: #1c232b;
   --color-aurometal-saurus: #6c7289;
@@ -116,7 +117,7 @@ button {
   font-style: normal;
   font-weight: 500;
   line-height: 23px;
-  text-decoration-line: strikethrough;
+  text-decoration:line-through;
 }
 
 .text-preset-6 {
@@ -139,18 +140,22 @@ button {
   opacity: 0;
   text-decoration: 0;
 
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: var(--color-stone-900);
+  color: var(--color-deep-aquamarine-active);
 
-  outline: 3px solid var(--color-stone-900);
+  outline: 3px solid var(--color-deep-aquamarine-active);
   outline-offset: 5px;
   border-radius: 1px;
+
+  transform: scale(0);
 
   transition: opacity 0.2s ease-in;
 }
 
 .skip-link:focus-visible {
   opacity: 1;
+  transform: scale(1);
 }
 
 /* CARD */
@@ -197,33 +202,50 @@ button {
 
 .card__btn {
   align-items: center;
+  justify-content: center;
   gap: 11px;
 
   width: 100%;
   max-width: 295px;
-  padding: 15px 92px;
+  padding: 15px;
   background-color: var(--color-deep-aquamarine);
+  border: none;
   border-radius: 8px;
+  outline: none;
+
+  cursor: pointer;
+
+  transition: background-color .2s ease-in-out;
 }
 
 .card__btn svg path{
   fill: var(--color-white);
 }
 
+.card__btn:focus-visible {
+  background-color: var(--color-deep-aquamarine-active);
+}
+
+.card__btn:hover {
+  background-color: var(--color-deep-aquamarine-active);
+}
+
 /* ATTRIBUTION */
 .attribution {
   position: absolute;
-  bottom: -50px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
 
+  width: 100%;
+
   font-family: "Young Serif", serif;
   text-align: center;
-  color: var(--color-stone-900);
+  color: var(--color-gunmetal);
 }
 
 .attribution a {
-  color: var(--color-rose-800);
+  color: var(--color-deep-aquamarine);
   text-decoration: none;
 
   outline: none;
@@ -233,13 +255,13 @@ button {
 }
 
 .attribution a:focus-visible {
-  border-color: var(--color-rose-800);
+  border-color: var(--color-deep-aquamarine-active);
 }
 
 .attribution a:hover {
-  border-color: var(--color-rose-800);
+  border-color: var(--color-deep-aquamarine-active);
 }
 
 .attribution a:active {
-  border-color: var(--color-rose-800);
+  border-color: var(--color-deep-aquamarine-active);
 }

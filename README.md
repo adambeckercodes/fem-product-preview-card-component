@@ -26,8 +26,8 @@ The task was to create a responsive product preview card that:
 ![Screenshot](./Frontend-Mentor-Product-preview-card-component-12-06-2024_03_27_PM.png)
 
 ### Links
-- **Live Site URL**: [View Live Site](https://fem-product-preview-card.vercel.app/)
-- **Solution URL**: [View Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/product-preview-card-component-responsive-and-accessible)
+- **Live Site URL**: [View Live Site](https://fem-product-preview-card-component-iota.vercel.app/)
+- **Solution URL**: [View Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-product-preview-card-qcorPeabc1)
 
 ---
 
